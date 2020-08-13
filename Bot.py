@@ -16,21 +16,20 @@ async def on_connect():
 		print(f"Connected to Discord. Getting ready...")
 		print(f'-----------------------------')
 		
-@client.event
-async def on_message(message):
-  if str(message.content).lower() == f'How_do_I_join_Xetiq': 
-    join=""
-    join+="1. What server are you \n"
-    join+="-NAE \n"
-    join+="-NAW \n"
-    join+="-EU \n"
-    join+="-ASIA \n"
-    join+="-OCE \n \n"
-    join+="2. What do you want to join as \n \n"
-    join+=""
-    join+=""
-    join+=""
-    ctx.send(join)
-    print("done")
+@client.command(usage="Learn how to join a role")
+async def How_do_I_join_Xetiq(self, ctx):
+  join=""
+  join+="1. What server are you \n"
+  join+="-NAE \n"
+  join+="-NAW \n"
+  join+="-EU \n"
+  join+="-ASIA \n"
+  join+="-OCE \n \n"
+  join+="2. What do you want to join as \n \n"
+  join+=""
+  join+=""
+  join+=""
+  ctx.send(join)
+  print("done")
 		
 client.run("NzQzNTUyNDcyMzQ5NTQwNDUy.XzWVMw.6CpqvEJIAA7LNTbgNw6MtVYOzVw")
