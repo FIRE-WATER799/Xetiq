@@ -6,6 +6,7 @@ PREFIX="!"
 client = commands.Bot(command_prefix=PREFIX, pm_help=True, owner_id=702954010008748174, case_insensitive=True)
 
 client.remove_command("help")
+client._uptime = None
 
 @client.event
 async def on_connect():
