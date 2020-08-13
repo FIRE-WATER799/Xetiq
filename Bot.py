@@ -15,7 +15,8 @@ async def on_connect():
 	if client._uptime is None:
 		print(f"Connected to Discord. Getting ready...")
 		print(f'-----------------------------')
-@client.event()
+		
+@client.event
 async def on_message(message):
   if str(message.content).lower() == f'How do I join Xetiq': 
     join=""
