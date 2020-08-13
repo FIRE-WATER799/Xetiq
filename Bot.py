@@ -14,7 +14,7 @@ async def on_connect():
 		print(f"Connected to Discord. Getting ready...")
 		print(f'-----------------------------')
 
-if({message.content}=="How do I join Xetiq"):
+if str(message.content).lower() == f'How do I join Xetiq': 
   join=""
   join+="1. What server are you \n"
   join+="-NAE \n"
