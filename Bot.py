@@ -17,7 +17,7 @@ async def on_connect():
 		print(f'-----------------------------')
 		
 @client.command(usage="Learn how to join a role")
-async def How_do_I_join_Xetiq(self):
+async def How_do_I_join_Xetiq(ctx):
   join=""
   join+="1. What server are you \n"
   join+="-NAE \n"
