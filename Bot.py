@@ -18,7 +18,7 @@ async def on_connect():
 		
 @client.event
 async def on_message(message):
-  if str(message.content).lower() == f'How do I join Xetiq': 
+  if str(message.content).lower() == f'How_do_I_join_Xetiq': 
     join=""
     join+="1. What server are you \n"
     join+="-NAE \n"
