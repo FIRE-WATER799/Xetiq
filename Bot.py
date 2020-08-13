@@ -1,7 +1,7 @@
 import discord, os
 from discord.ext import commands
 
-PREFIX=x!
+PREFIX = x!
 
 client = commands.Bot(command_prefix=PREFIX, pm_help=True, owner_id=702954010008748174, case_insensitive=True)
 
