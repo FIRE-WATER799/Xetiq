@@ -53,7 +53,7 @@ async def help(ctx):
       embed.set_image(url='https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
 
       await ctx.send(embed=embed)
-    if({embed_togle}==0):
+    if({embed_toggle}==0):
       await ctx.send(help)
 
 		
