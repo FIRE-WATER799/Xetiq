@@ -35,5 +35,19 @@ async def How_do_I_join_Xetiq(ctx):
   embed=discord.Embed(color=0x0000, title="How to join", description=join)
   embed.set_footer(text="Created by fire#7010") 
   await ctx.send(embed=embed)
+  
+@client.command(usage="Gives help about commands")
+async def help(ctx):
+    help= "**"
+    for command in client.commands:
+        help+=f"{command}- `{command.usage}`\n"
+    help+="**"   
+    embed=discord.Embed(color=0x0000, title="My Commands", description=help)
+    embed.set_footer(text="Created by fire#7010") 
+    embed.set_thumbnail(url='https://image.ibb.co/caM2BK/help.gif')
+    embed.set_image(url='https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
+
+    await ctx.send(embed=embed)
+
 		
 client.run("NzQzNTUyNDcyMzQ5NTQwNDUy.XzWVMw.6CpqvEJIAA7LNTbgNw6MtVYOzVw")
