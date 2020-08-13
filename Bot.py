@@ -1,5 +1,7 @@
 import discord, os
 from discord.ext import commands
+from discord import member
+from discord.ext.commands import Bot
 
 PREFIX="!"
 
