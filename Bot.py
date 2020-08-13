@@ -31,5 +31,6 @@ async def on_message(message):
     join+=""
     join+=""
     ctx.send(join)
+    print("done")
 		
 client.run("NzQzNTUyNDcyMzQ5NTQwNDUy.XzWVMw.6CpqvEJIAA7LNTbgNw6MtVYOzVw")
