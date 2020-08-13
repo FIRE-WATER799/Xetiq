@@ -29,7 +29,7 @@ async def How_do_I_join_Xetiq(ctx):
   join+=""
   join+=""
   join+=""
-  ctx.send(join)
+  await ctx.send(join)
   print("done")
 		
 client.run("NzQzNTUyNDcyMzQ5NTQwNDUy.XzWVMw.6CpqvEJIAA7LNTbgNw6MtVYOzVw")
