@@ -83,8 +83,8 @@ async def Congratulations(ctx, *, arg=None):
       await ctx.send("Error: You do not have permission to do this")
     if(config["embed_toggle"]==1):
       Congratulations_embed_error = discord.Embed(
-        color=0xFF0000
-        )
+         color=0xFF0000
+         )
       Congratulations_embed_error.add_field(name="Error", value="You do not have permission to do this")
       await ctx.send(Congratulations_embed_error)
 
