@@ -59,26 +59,35 @@ async def help(ctx):
     
 @client.command()
 async def Congratulations(ctx, *, arg=None):
-  if(ctx.message.author.id==702954010008748174):
+  if(ctx.message.author.id== or 702954010008748174):
     if arg == None:
       if(config["embed_toggle"]==0):
         await ctx.send("Error: Please specify who you want to congratulate")
       if(config["embed_toggle"]==1):
-        embed = discord.Embed(
+        Congratulations_embed_empty = discord.Embed(
           color=0xFF0000
           )
-        embed.add_field(name='Error', value="Please specify who you want to congratulate", inline=False)
-        await ctx.send(embed=embed)
+        Congratulations_embed_empty.add_field(name='Error', value="Please specify who you want to congratulate", inline=False)
+        await ctx.send(embed=Congratulations_embed_empty)
     else:
       if(config["embed_toggle"]==0):
         await ctx.send(f"{ctx.message.author.name}: Congratulates {arg} for joing the team")
       if(config["embed_toggle"]==1):
-        embed = discord.Embed(
+        Congratulations_embed_full = discord.Embed(
         color=0x2ECC7
         )
-        embed.add_field(name=f'{ctx.message.author.name}', value=f"Congratulates {arg} for joing the team", inline=False)
-        await ctx.send(embed=embed)
-    
+        Congratulations_embed_full.add_field(name=f'{ctx.message.author.name}', value=f"Congratulates {arg} for joing the team", inline=False)
+        await ctx.send(embed=Congratulations_embed_full)
+  else:
+    if(config["embed_toggle"]==0):
+      await ctx.send("Error: You do not have permission to do this")
+    if(config["embed_toggle"]==1):
+      Congratulations_embed_error = discord.Embed(
+          color=0xFF0000
+          )
+        Congratulations_embed_error.add_field(name="Error", value="You do not have permission to do this")
+        await ctx.send(Congratulations_embed_error)
+
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
