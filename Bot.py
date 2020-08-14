@@ -35,7 +35,7 @@ async def How_do_I_join_Xetiq(ctx):
   join+="And thats how u Join Xetiq so try to join this clan and be apart with the members in the clan!"
   if(embed_toggle==0):
     await ctx.send(join)
-  if({embed_toggle}==1):
+  if(embed_toggle==1):
     join_embed=discord.Embed(color=0x0000, title="How to join", description=join)
     join_embed.set_footer(text="Created by fire#7010") 
     await ctx.send(embed=join_embed)
@@ -47,9 +47,9 @@ async def help(ctx):
     for command in client.commands:
         help+=f"{command}- `{command.usage}`\n"
     help+="**"   
-    if({embed_toggle}==0):
+    if(embed_toggle==0):
       await ctx.send(help)
-    if({embed_toggle}==1):
+    if(embed_toggle==1):
       embed=discord.Embed(color=0x0000, title="My Commands", description=help)
       embed.set_footer(text="Created by fire#7010") 
       embed.set_thumbnail(url='https://image.ibb.co/caM2BK/help.gif')
