@@ -17,7 +17,7 @@ class ping(commands.Cog):
     @commands.command(usage="Get's the bot's ping")
     async def ping(self, ctx):
       before = time.monotonic()
-      message = await ctx.send("Ping")
+      message = await ctx.send("Pinging")
       ping = (time.monotonic() - before) * 1000
       ping_content = (f":ping_pong:   |   {int(ping)}ms\n"
              f":timer:   |   {self.client.latency * 1000:.0f}ms")
