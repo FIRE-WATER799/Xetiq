@@ -59,7 +59,7 @@ async def help(ctx):
     
 @client.command()
 async def Congratulations(ctx, *, arg=None):
-  if(ctx.message.author.id==361143341901152267 or 702954010008748174):
+  if(ctx.message.author.id==702954010008748174):
     if arg == None:
       if(config["embed_toggle"]==0):
         await ctx.send("Error: Please specify who you want to congratulate")
