@@ -86,7 +86,7 @@ async def Congratulations(ctx, *, arg=None):
          color=0xFF0000
          )
       Congratulations_embed_error.add_field(name="Error", value="You do not have permission to do this")
-      await ctx.send(Congratulations_embed_error)
+      await ctx.send(embed=Congratulations_embed_error)
 
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
