@@ -4,7 +4,7 @@ from discord import member
 from discord.ext.commands import Bot
 
 PREFIX="$"
-embed_toggle=0
+embed_toggle=1
 
 client = commands.Bot(command_prefix=PREFIX, pm_help=True, owner_id=702954010008748174, case_insensitive=True)
 
