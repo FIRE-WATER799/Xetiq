@@ -1,7 +1,6 @@
 import discord, os, random
 from discord import Embed, Colour, Member, User
 from discord.ext import commands
-from discord.ext.commands import about
 from typing import Union
 
 PREFIX="$"
