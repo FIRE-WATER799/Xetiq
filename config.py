@@ -2,7 +2,7 @@
   
   "prefix": "$",
   
-  "token": "NzM2MzI1NjM1MTgxNjQxODA5.XxtKrw.fl2RxgprNPImFiq5m7FcrVNO1vU",
+  "token": "NzQzNTUyNDcyMzQ5NTQwNDUy.XzWVMw.6CpqvEJIAA7LNTbgNw6MtVYOzVw",
 
   "embed_toggle": 1
   
