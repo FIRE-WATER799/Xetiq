@@ -18,7 +18,7 @@ async def on_connect():
 		print(f'-----------------------------')
 		
 @client.command(usage="Get's the bot's ping")
-async def ping(self, ctx):
+async def ping(ctx, self):
   before = time.monotonic()
   message = await ctx.send("Pong")
   ping = (time.monotonic() - before) * 1000
