@@ -38,7 +38,6 @@ async def How_do_I_join_Xetiq(ctx):
   if(embed_toggle==1):
     join_embed=discord.Embed(color=0x0000, title="How to join", description=join)
     join_embed.set_footer(text="Created by fire#7010") 
-    join_embed.set_image(url='https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
     await ctx.send(embed=join_embed)
 
   
