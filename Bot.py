@@ -59,24 +59,25 @@ async def help(ctx):
     
 @client.command()
 async def Congratulations(ctx, *, arg=None):
-  if arg == None:
-    if(config["embed_toggle"]=0):
-      await ctx.send("Error: Please specify who you want to congratulate")
-    if(config["embed_toggle"]==1):
-      embed = discord.Embed(
-        color=0xFF0000
-        )
-      embed.add_field(name='Error', value="Please specify who you want to congratulate", inline=False)
-      await ctx.send(embed=embed)
-  else:
-    if(config["embed_toggle"]==0):
-      await ctx.send(f"{ctx.message.author.name}: Congratulates {arg} for joing the team")
-    if(config["embed_toggle"]==1):
-      embed = discord.Embed(
+  if ctx.message.author.id==
+    if arg == None:
+      if(config["embed_toggle"]==0):
+        await ctx.send("Error: Please specify who you want to congratulate")
+      if(config["embed_toggle"]==1):
+        embed = discord.Embed(
+          color=0xFF0000
+          )
+        embed.add_field(name='Error', value="Please specify who you want to congratulate", inline=False)
+        await ctx.send(embed=embed)
+    else:
+      if(config["embed_toggle"]==0):
+        await ctx.send(f"{ctx.message.author.name}: Congratulates {arg} for joing the team")
+      if(config["embed_toggle"]==1):
+        embed = discord.Embed(
         color=0x2ECC7
         )
-      embed.add_field(name=f'{ctx.message.author.name}', value=f"Congratulates {arg} for joing the team", inline=False)
-      await ctx.send(embed=embed)
+        embed.add_field(name=f'{ctx.message.author.name}', value=f"Congratulates {arg} for joing the team", inline=False)
+        await ctx.send(embed=embed)
     
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
