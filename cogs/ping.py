@@ -17,7 +17,7 @@ class ping(commands.Cog):
     @commands.command(usage="Get's the bot's ping")
     async def ping(self, ctx):
       before = time.monotonic()
-      message = await ctx.send("Pong")
+      message = await ctx.send("Ping")
       ping = (time.monotonic() - before) * 1000
       ping_content = (f":ping_pong:   |   {int(ping)}ms\n"
              f":timer:   |   {self.client.latency * 1000:.0f}ms")
@@ -25,7 +25,7 @@ class ping(commands.Cog):
         await message.delete()
         await ctx.send("Ping dose not support non-embeds")
       if(config["embed_toggle"]==1):
-        ping_embed=discord.Embed(color=0x0000, title="Ping", description=ping_content)
+        ping_embed=discord.Embed(color=0x0000, title="Pong", description=ping_content)
         await message.edit(embed=ping_embed)
         
 def setup(client):
