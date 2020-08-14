@@ -69,7 +69,7 @@ async def help(ctx):
       help_embed.set_thumbnail(url='https://image.ibb.co/caM2BK/help.gif')
       help_embed.set_image(url='https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
 
-      await ctx.send(embed=embed)
+      await ctx.send(embed=help_embed)
     
 		
 client.run("NzQzNTUyNDcyMzQ5NTQwNDUy.XzWVMw.6CpqvEJIAA7LNTbgNw6MtVYOzVw")
