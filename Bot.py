@@ -1,7 +1,8 @@
-import discord, os
+import discord, os, random
+from discord import Embed, Colour, Member, User
 from discord.ext import commands
-from discord import member
-from discord.ext.commands import Bot
+from discord.ext.commands import about
+from typing import Union
 
 PREFIX="$"
 embed_toggle=1
@@ -17,6 +18,19 @@ async def on_connect():
 		print(f"Connected to Discord. Getting ready...")
 		print(f'-----------------------------')
 		
+@client.command(usage="Get's the bot's ping")
+async def ping(ctx):
+  before = time.monotonic()
+  message = await ctx.send("Pong")
+  ping = (time.monotonic() - before) * 1000
+  ping_content = (f":ping_pong:   |   {int(ping)}ms\n"
+             f":timer:   |   {self.client.latency * 1000:.0f}ms")
+  if(embed_toggle==0):
+    await message.edit(ping_content)
+  if(embed_toggle==1):
+    ping_embed=discord.Embed(color=0x0000, title="ping", description=ping_content)
+    await message.edit(embed=ping_embed)
+
 @client.command(usage="Learn how to join a role")
 async def How_do_I_join_Xetiq(ctx):
   join=""
