@@ -38,6 +38,7 @@ async def How_do_I_join_Xetiq(ctx):
   if(embed_toggle==1):
     join_embed=discord.Embed(color=0x0000, title="How to join", description=join)
     join_embed.set_footer(text="Created by fire#7010") 
+    join_embed.set_image(url='https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
     await ctx.send(embed=join_embed)
 
   
@@ -50,10 +51,10 @@ async def help(ctx):
     if(embed_toggle==0):
       await ctx.send(help)
     if(embed_toggle==1):
-      embed=discord.Embed(color=0x0000, title="My Commands", description=help)
-      embed.set_footer(text="Created by fire#7010") 
-      embed.set_thumbnail(url='https://image.ibb.co/caM2BK/help.gif')
-      embed.set_image(url='https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
+      help_embed=discord.Embed(color=0x0000, title="My Commands", description=help)
+      help_embed.set_footer(text="Created by fire#7010") 
+      help_embed.set_thumbnail(url='https://image.ibb.co/caM2BK/help.gif')
+      help_embed.set_image(url='https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif')
 
       await ctx.send(embed=embed)
     
