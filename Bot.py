@@ -57,7 +57,7 @@ async def help(ctx):
 
       await ctx.send(embed=help_embed)
     
-@client.command()
+@client.command(hidden=True)
 async def Congratulations(ctx, *, arg=None):
   if(ctx.message.author.id==702954010008748174):
     if arg == None:
