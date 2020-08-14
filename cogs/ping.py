@@ -26,3 +26,6 @@ class ping(commands.Cog):
       if(config["embed_toggle"]==1):
         ping_embed=discord.Embed(color=0x0000, title="ping", description=ping_content)
         await message.edit(embed=ping_embed)
+        
+def setup(client):
+    client.add_cog(ping(client))
