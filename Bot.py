@@ -17,7 +17,7 @@ async def on_connect():
 		print(f'-----------------------------')
 		
 @client.event
-async def on_message():
+async def on_message(ctx):
   log_channel = client.get_channel(740551367222886430)
   await log_channel.send(ctx.message)
 
