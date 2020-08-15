@@ -22,7 +22,7 @@ async def on_message(ctx):
     pass
   else:
     log_channel = client.get_channel(743846438286655499)
-    await log_channel.send(f"{ctx.content} sent in {ctx.channel} by {ctx.author}")
+    await log_channel.send(f"{ctx.content} sent in #{ctx.channel} by {ctx.author}")
 
 @client.command(usage="Learn how to join a role")
 async def How_do_I_join_Xetiq(ctx):
