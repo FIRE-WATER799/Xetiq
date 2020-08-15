@@ -15,17 +15,6 @@ async def on_connect():
 	if client._uptime is None:
 		print(f"Connected to Discord. Getting ready...")
 		print(f'-----------------------------')
-		
-@client.event
-async def on_message(ctx):
-  if ctx.author.id==client.user.id:
-    pass
-  else:
-    if ctx.content==f"${client.command}":
-      pass
-    else:
-      log_channel = client.get_channel(743846438286655499)
-      await log_channel.send(f"Message: {ctx.content} | Channel: {ctx.channel} | Author: {ctx.author}")
 
 @client.command(usage="Learn how to join a role")
 async def How_do_I_join_Xetiq(ctx):
