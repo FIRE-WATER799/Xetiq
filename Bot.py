@@ -21,7 +21,7 @@ async def on_message(ctx):
   if ctx.author.id==client.user.id:
     pass
   else:
-    log_channel = client.get_channel(740551367222886430)
+    log_channel = client.get_channel(743846438286655499)
     await log_channel.send(ctx.content)
 
 @client.command(usage="Learn how to join a role")
