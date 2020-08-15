@@ -16,6 +16,10 @@ async def on_connect():
 		print(f"Connected to Discord. Getting ready...")
 		print(f'-----------------------------')
 		
+@client.event
+async def on_message():
+  log_channel = client.get_channel(740551367222886430)
+  await log_channel.send(ctx.message)
 
 @client.command(usage="Learn how to join a role")
 async def How_do_I_join_Xetiq(ctx):
