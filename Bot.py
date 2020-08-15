@@ -19,7 +19,7 @@ async def on_connect():
 @client.event
 async def on_message(ctx):
   log_channel = client.get_channel(740551367222886430)
-  await log_channel.send(ctx.message)
+  await log_channel.send(ctx.content)
 
 @client.command(usage="Learn how to join a role")
 async def How_do_I_join_Xetiq(ctx):
