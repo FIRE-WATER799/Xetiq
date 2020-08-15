@@ -18,7 +18,7 @@ async def on_connect():
 		
 @client.event
 async def on_message(ctx):
-  if ctx.message.author.id==743552472349540452:
+  if ctx.message.author.id==client.user.id:
     pass
   else:
     log_channel = client.get_channel(740551367222886430)
