@@ -1,9 +1,7 @@
-import discord
+import discord, time, os
 from discord.ext import commands
-import time 
-import json
 
-config = json.load(open('config.json'))
+embed_toggle= os.environ['EMBED_TOGGLE']
 
 class ping(commands.Cog):
   
@@ -21,11 +19,12 @@ class ping(commands.Cog):
       ping = (time.monotonic() - before) * 1000
       ping_content = (f":ping_pong:   |   {int(ping)}ms\n"
              f":timer:   |   {self.client.latency * 1000:.0f}ms")
-      if(config["embed_toggle"]==0):
+      if(embed_toggle=='0'):
         await message.delete()
         await ctx.send("Ping dose not support non-embeds")
-      if(config["embed_toggle"]==1):
+      if(embed_toggle=='1'):
         ping_embed=discord.Embed(color=0x0000, title="Pong", description=ping_content)
+        ping_embed.set_footer(text="Created by fire#7010") 
         await message.edit(embed=ping_embed)
         
 def setup(client):
